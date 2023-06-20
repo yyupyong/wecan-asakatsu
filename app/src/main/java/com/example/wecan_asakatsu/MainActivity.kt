@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MovableContent
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.wecan_asakatsu.navigation.AsakatsuNavigation
 import com.example.wecan_asakatsu.ui.theme.WeCan_asakatsuTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +19,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AsakatsuApp {
-
+                AsakatsuNavigation()
             }
         }
     }
@@ -33,7 +34,7 @@ class MainActivity : ComponentActivity() {
                 modifier = Modifier.fillMaxSize(),
                 color = MaterialTheme.colorScheme.background
             ) {
-                content
+                content()
             }
         }
     }
