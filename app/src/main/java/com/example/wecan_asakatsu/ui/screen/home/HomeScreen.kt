@@ -10,6 +10,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarColors
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -26,6 +27,6 @@ fun HomeScreen(navController: NavController) {
 fun HomeScreenTopbar() {
     TopAppBar(
         title = { Text(text = "WECAN朝活") },
-        colors = TopAppBarDefaults.smallTopAppBarColors()
+        colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = Color(0xFFf6f6f6))
     )
 }

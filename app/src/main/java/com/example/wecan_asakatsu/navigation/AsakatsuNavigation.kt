@@ -16,5 +16,6 @@ fun AsakatsuNavigation(navController: NavHostController) {
     ) {
         composable(AsakatsuScreens.HomeScreen.name) { HomeScreen(navController) }
         composable(AsakatsuScreens.MyPageScreen.name) { MypageScreen() }
+
     }
 }
