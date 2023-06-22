@@ -14,7 +14,7 @@ fun AsakatsuNavigation(navController: NavHostController) {
         navController = navController,
         startDestination = AsakatsuScreens.MyPageScreen.name
     ) {
-        composable(AsakatsuScreens.HomeScreen.name) { HomeScreen() }
+        composable(AsakatsuScreens.HomeScreen.name) { HomeScreen(navController) }
         composable(AsakatsuScreens.MyPageScreen.name) { MypageScreen() }
     }
 }
