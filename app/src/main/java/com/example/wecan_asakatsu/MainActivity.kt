@@ -17,6 +17,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.outlined.AccountBox
+import androidx.compose.material.icons.outlined.AccountCircle
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.rounded.AccountCircle
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -58,7 +62,7 @@ class MainActivity : ComponentActivity() {
                 ) {
 
                     BottomNavigationItem(
-                        icon = { Icon(Icons.Default.Home, contentDescription = null) },
+                        icon = { Icon(Icons.Outlined.Home, contentDescription = null) },
                         selected = navController.currentBackStackEntry?.destination?.route == AsakatsuScreens.HomeScreen.name,
                         onClick = {
                             navController.navigate(AsakatsuScreens.HomeScreen.name) {
@@ -68,7 +72,7 @@ class MainActivity : ComponentActivity() {
                     )
 
                     BottomNavigationItem(
-                        icon = { Icon(Icons.Default.AccountCircle, contentDescription = null) },
+                        icon = { Icon(Icons.Outlined.AccountCircle, contentDescription = null) },
                         selected = navController.currentBackStackEntry?.destination?.route == AsakatsuScreens.MyPageScreen.name,
                         onClick = {
                             navController.navigate(AsakatsuScreens.MyPageScreen.name) {
