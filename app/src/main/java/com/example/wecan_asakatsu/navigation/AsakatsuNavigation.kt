@@ -12,7 +12,7 @@ import com.example.wecan_asakatsu.ui.screen.mypage.MypageScreen
 fun AsakatsuNavigation(navController: NavHostController) {
     NavHost(
         navController = navController,
-        startDestination = AsakatsuScreens.MyPageScreen.name
+        startDestination = AsakatsuScreens.HomeScreen.name
     ) {
         composable(AsakatsuScreens.HomeScreen.name) { HomeScreen(navController) }
         composable(AsakatsuScreens.MyPageScreen.name) { MypageScreen() }

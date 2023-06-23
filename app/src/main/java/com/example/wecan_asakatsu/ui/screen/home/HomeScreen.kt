@@ -29,7 +29,10 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -42,18 +45,10 @@ fun HomeScreen(navController: NavController) {
 
 }
 
-@Composable
-fun HomeScreenTopbar() {
-    TopAppBar(
-        title = { Text(text = "WECAN朝活") },
-        colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = Color(0xFFf6f6f6))
-    )
-}
-
 //ここをカスタムするラムダで渡しているTextをカスタム
 @Composable
 fun HomeTopAppBar(
-    title:String,
+    title: String,
     modifier: Modifier = Modifier,
     backgroundColor: Color = Color(0xFFf6f6f6),
     contentColor: Color = contentColorFor(backgroundColor),
@@ -61,8 +56,15 @@ fun HomeTopAppBar(
     Surface(
         color = backgroundColor,
         contentColor = contentColor,
-        modifier = modifier.height(100.dp).fillMaxWidth()  // 高さを指定
+        modifier = modifier
+            .height(100.dp)
+            .fillMaxWidth()
     ) {
-      Text(text = title )
+        Text(
+            text = title,
+            style = TextStyle(fontSize = 28.sp, fontWeight = FontWeight.Bold),
+            modifier = Modifier.padding(start = 20.dp, top = 20.dp)
+        )
     }
 }
+
