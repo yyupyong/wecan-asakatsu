@@ -3,9 +3,11 @@
 package com.example.wecan_asakatsu.ui.screen.home
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
@@ -13,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.AppBarDefaults
 import androidx.compose.material.LocalContentAlpha
 import androidx.compose.material.contentColorFor
@@ -41,11 +44,23 @@ fun HomeScreen(navController: NavController) {
 
     Scaffold(topBar = { HomeTopAppBar("WECAN朝活") }) {
 
+        HomeContent()
+
     }
 
 }
 
-//ここをカスタムするラムダで渡しているTextをカスタム
+//ここにHomeScreenの主な要素を配置する
+//この部分がImageと各Challengeへの動線、画像がないのでここはあとでそうやさんに送ってもらう
+@Composable
+fun HomeContent() {
+    Column() {
+//        Image(painter = , contentDescription = )
+
+//        LazyColumn()
+    }
+}
+
 @Composable
 fun HomeTopAppBar(
     title: String,
