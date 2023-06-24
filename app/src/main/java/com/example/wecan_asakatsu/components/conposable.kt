@@ -2,7 +2,9 @@ package com.example.wecan_asakatsu.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -37,23 +39,29 @@ fun GradationTopbar(
         colors = listOf(Color.Red, Color.Blue)
     )
 
-    Surface(
+    Box(
         modifier = modifier
             .height(50.dp)
             .fillMaxWidth()
-            .background(gradient)
+            .background(brush = gradient)
     ) {
         Row(
+            modifier = Modifier.fillMaxSize(),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
             androidx.compose.material3.Text(
-
                 text = title,
                 style = TextStyle(fontSize = 24.sp, fontWeight = FontWeight.Bold),
             )
         }
-
     }
 }
+
+
+
+
+
+
+
 
