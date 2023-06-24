@@ -39,6 +39,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import com.example.wecan_asakatsu.navigation.AsakatsuNavigation
 import com.example.wecan_asakatsu.navigation.AsakatsuScreens
+import com.example.wecan_asakatsu.ui.theme.AsakatsuGrey
 import com.example.wecan_asakatsu.ui.theme.WeCan_asakatsuTheme
 
 class MainActivity : ComponentActivity() {
@@ -58,9 +59,10 @@ class MainActivity : ComponentActivity() {
         Scaffold(
             bottomBar = {
                 BottomNavigation(
-                    backgroundColor = Color.White
+                    backgroundColor =  AsakatsuGrey
                 ) {
 
+                    //TODO ここの要素を５つに増やす＋真ん中はピンクの円で囲う
                     BottomNavigationItem(
                         icon = { Icon(Icons.Outlined.Home, contentDescription = null) },
                         selected = navController.currentBackStackEntry?.destination?.route == AsakatsuScreens.HomeScreen.name,
