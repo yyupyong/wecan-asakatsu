@@ -59,12 +59,13 @@ class MainActivity : ComponentActivity() {
         Scaffold(
             bottomBar = {
                 BottomNavigation(
-                    backgroundColor =  AsakatsuGrey
+                    backgroundColor = AsakatsuGrey
                 ) {
 
                     //TODO ここの要素を５つに増やす＋真ん中はピンクの円で囲う
                     BottomNavigationItem(
-                        icon = { Icon(Icons.Outlined.Home, contentDescription = null) },
+
+                        icon = { Icon(Icons.Outlined.Home, contentDescription = null,Modifier.size(40.dp)) },
                         selected = navController.currentBackStackEntry?.destination?.route == AsakatsuScreens.HomeScreen.name,
                         onClick = {
                             navController.navigate(AsakatsuScreens.HomeScreen.name) {
@@ -74,7 +75,14 @@ class MainActivity : ComponentActivity() {
                     )
 
                     BottomNavigationItem(
-                        icon = { Icon(Icons.Outlined.AccountCircle, contentDescription = null) },
+                        //ここでアイコンだけではなくColumnでアイコンと文字のComposableを渡したい
+                        icon = {
+                            Icon(
+                                Icons.Outlined.AccountCircle,
+                                contentDescription = null,
+                                Modifier.size(40.dp)
+                            )
+                        },
                         selected = navController.currentBackStackEntry?.destination?.route == AsakatsuScreens.MyPageScreen.name,
                         onClick = {
                             navController.navigate(AsakatsuScreens.MyPageScreen.name) {
