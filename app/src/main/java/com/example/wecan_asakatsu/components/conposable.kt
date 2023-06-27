@@ -34,6 +34,7 @@ fun GradationTopbarPreview(
 fun GradationTopbar(
     title: String,
     modifier: Modifier = Modifier,
+    content: @Composable () -> Unit = {},
 ) {
     val gradient = Brush.horizontalGradient(
         colors = listOf(
@@ -55,11 +56,12 @@ fun GradationTopbar(
             androidx.compose.material3.Text(
                 text = title,
                 style = TextStyle(
-                    fontSize = 24.sp,
+                    fontSize = 32.sp,
                     fontWeight = FontWeight.Normal,
                     color = Color.White
                 ),
             )
+            content()
         }
     }
 }
