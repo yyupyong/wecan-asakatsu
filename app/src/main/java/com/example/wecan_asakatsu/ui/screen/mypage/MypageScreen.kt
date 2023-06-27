@@ -8,12 +8,17 @@ import com.example.wecan_asakatsu.components.GradationTopbar
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun MypageScreen(){
-    
-    androidx.compose.material.Scaffold (
-        topBar = { GradationTopbar(title = "WECAN朝活")}
-            ){
-        
+fun MypageScreen() {
+
+    androidx.compose.material.Scaffold(
+        topBar = {
+            GradationTopbar(title = "WECAN") {
+                //ここでドロワーのComposableを渡す
+            }
+        }
+
+    ) {
+
     }
-    
+
 }
