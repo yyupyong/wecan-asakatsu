@@ -35,13 +35,15 @@ fun GradationTopbar(
     title: String,
     modifier: Modifier = Modifier,
 ) {
-    val gradient = Brush.verticalGradient(
-        colors = listOf(Color.Red, Color.Blue)
+    val gradient = Brush.horizontalGradient(
+        colors = listOf(
+            Color.Yellow, Color.Red
+        )
     )
 
     Box(
         modifier = modifier
-            .height(50.dp)
+            .height(65.dp)
             .fillMaxWidth()
             .background(brush = gradient)
     ) {
@@ -52,7 +54,11 @@ fun GradationTopbar(
         ) {
             androidx.compose.material3.Text(
                 text = title,
-                style = TextStyle(fontSize = 24.sp, fontWeight = FontWeight.Bold),
+                style = TextStyle(
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Normal,
+                    color = Color.White
+                ),
             )
         }
     }
