@@ -12,6 +12,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import com.example.wecan_asakatsu.components.GradationTopbar
 import kotlinx.coroutines.coroutineScope
 
@@ -21,6 +22,7 @@ import kotlinx.coroutines.coroutineScope
 fun MypageScreen() {
 
     val drawerState = rememberDrawerState(DrawerValue.Closed)
+    val coroutineScope = rememberCoroutineScope()
 
 
     androidx.compose.material.Scaffold(
